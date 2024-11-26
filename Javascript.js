@@ -16,6 +16,9 @@
     // Función de login para usuario normal
 
 
+    function loginUser(event) {
+        event.preventDefault(); // Evitar que el formulario se envíe
+
     const users = [
        {
             email: "usuario@ejemplo.com",
@@ -43,10 +46,6 @@
             role: "Planeación"
         }
     ];
-
-    function loginUser(event) {
-        event.preventDefault(); // Evitar que el formulario se envíe
-
         // Obtener los valores ingresados por el usuario
         const email = document.getElementById('user-email').value;
         const password = document.getElementById('user-password').value;
